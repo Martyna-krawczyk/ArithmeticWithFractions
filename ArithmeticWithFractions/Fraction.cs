@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
+
 namespace ArithmeticWithFractions
 {
     public class Fraction
@@ -12,7 +14,14 @@ namespace ArithmeticWithFractions
 
         public Fraction Plus(Fraction fraction)
         {
-            return fraction._integerValue != 0 ? fraction : this;
+            if (fraction._integerValue != 0)
+            {
+                return new Fraction(this._integerValue + fraction._integerValue);
+            }
+            else
+            {
+                return this;
+            }
         }
 
         public int IntValue()
