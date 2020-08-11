@@ -21,6 +21,14 @@ namespace ArithmeticWithFractionsTests
 
             Assert.Equal(3, sum.IntValue());
         }
+        
+        [Fact]
+        public void ZeroPlusNonZero()
+        {
+            var sum = new Fraction(0).Plus(new Fraction(5));
+
+            Assert.Equal(5, sum.IntValue());
+        }
 
     }
 }

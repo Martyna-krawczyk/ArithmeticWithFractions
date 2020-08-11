@@ -12,7 +12,7 @@ namespace ArithmeticWithFractions
 
         public Fraction Plus(Fraction fraction)
         {
-            return this;
+            return fraction._integerValue != 0 ? fraction : this;
         }
 
         public int IntValue()
