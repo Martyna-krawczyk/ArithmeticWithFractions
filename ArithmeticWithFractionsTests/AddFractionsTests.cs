@@ -38,5 +38,13 @@ namespace ArithmeticWithFractionsTests
             Assert.Equal(7, sum.IntValue());
         }
 
+        [Fact]
+        public void NegativeInputsAndNegativeOutputs()
+        {
+            var sum = new Fraction(-3).Plus(new Fraction(1));
+
+            Assert.Equal(-2, sum.IntValue());
+        }
+
     }
 }

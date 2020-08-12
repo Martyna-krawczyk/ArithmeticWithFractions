@@ -14,7 +14,7 @@ namespace ArithmeticWithFractions
 
         public Fraction Plus(Fraction fraction)
         {
-            return new Fraction(this._integerValue + fraction._integerValue);
+            return new Fraction(_integerValue + fraction._integerValue);
         }
 
         public int IntValue()
